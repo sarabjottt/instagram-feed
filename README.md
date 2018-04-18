@@ -1,2 +1,2 @@
 # instafeed
-Embedding Instagram images dynamically to website
+A simple customizable Javascript to embed Instagram images dynamically on a website.
