@@ -15,5 +15,6 @@ Replace the default `count` with the number of images you want to show.
 ` let count = 8;`
 
 ## Author
-Sarabjot Singh
-[Buy me coffee!](https://paypal.me/sarabjottt)
+**Sarabjot Singh**
+
+> [Buy me coffee!](https://paypal.me/sarabjottt)
