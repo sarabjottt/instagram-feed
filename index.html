@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>instagrids.css</title>
+    <link rel="stylesheet" type="text/css" href="instagrid.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1><span>@twoyoungboyscafe</span></h1>
+    <div id="article">
+      <div id="instagram-feed"></div>
+    </div>
+
+    <script>
+      let token = "3402134906.95e185a.6c39dbb8a61a477d9a3a5956c607a4fb";
+      let count = 8;
+
+      async function getData() {
+        let response = await fetch(
+          "https://api.instagram.com/v1/users/self/media/recent?access_token=" +
+            token
+        );
+        let data = await response.json();
+        return data;
+      }
+
+      getData().then(data => {
+        for (x = 0; x < count; x++) {
+          let temp = `<a class="animation" href="${
+            data.data[x].link
+          }"><img id="${data.data[x].id}" title="${
+            data.data[x].caption.text
+          }" src="${data.data[x].images.standard_resolution.url}"</img></a>`;
+          console.log(data.data[x]);
+          document
+            .getElementById("instagram-feed")
+            .insertAdjacentHTML("beforeend", temp);
+        }
+      });
+    </script>
+  </body>
+</html>

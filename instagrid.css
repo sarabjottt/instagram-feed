@@ -1,0 +1,107 @@
+body {
+  background-color: #fafafa;
+}
+
+#instagram-feed {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a.animation {
+  height: 200px;
+  width: 200px;
+  /*! float: left; */
+  overflow: hidden;
+  margin: 10px;
+}
+
+a.animation:hover {
+  opacity: 0.6;
+}
+
+#instagram-feed a img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+#article {
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  color: #2f2f2f;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 10px;
+  margin: 50px auto 50px;
+  background: rgba(255, 253, 160, 1);
+  background: -webkit-linear-gradient(
+      left,
+      #00ffff 0%,
+      #97fba0 25%,
+      #97b1fb 50%,
+      #00ffff 100%
+    )
+    repeat;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-animation-name: masked-animation;
+  -webkit-animation-duration: 50s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: masked-animation;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+span {
+  cursor: default;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  h1 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin: 20px 0;
+  }
+  #instagram-feed {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  a.animation {
+    height: 150px;
+    width: 150px;
+    float: left;
+    overflow: hidden;
+    margin: 2px;
+  }
+
+  a.animation:hover {
+  }
+
+  #instagram-feed a img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  #article {
+    width: 100%;
+    margin: 0;
+  }
+}
